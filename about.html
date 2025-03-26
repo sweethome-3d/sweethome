@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Expert 3D Modeling for Interiors: From Concept to Execution. Transform your living spaces with our professional interior design and 3D floor plans." name="description"/>
+<meta content="sweet home, 3d, 5d, home 3d, interior design, 3d floor plans, design" name="keywords"/>
+<title>sweet_home | 3D Designeling for Interiors</title>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        background-color: #f8f8f8;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+    .navbar {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+    .btn-primary {
+        background-color: #4a4a4a;
+        border-color: #4a4a4a;
+    }
+    .btn-primary:hover {
+        background-color: #333;
+        border-color: #333;
+    }
+</style>
+<script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Lazy loading for images
+        const images = document.querySelectorAll('img[data-src]');
+        const config = {
+            rootMargin: '0px 0px 50px 0px',
+            threshold: 0
+        };
+
+        let observer = new IntersectionObserver((entries, self) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    preloadImage(entry.target);
+                    self.unobserve(entry.target);
+                }
+            });
+        }, config);
+
+        images.forEach(image => {
+            observer.observe(image);
+        });
+
+        function preloadImage(img) {
+            const src = img.getAttribute('data-src');
+            if (!src) { return; }
+            img.src = src;
+        }
+    });
+</script>
+<div class="position-fixed bottom-0 start-0 w-100 bg-light p-3 shadow" id="cookie-consent" style="display: none; z-index: 9999;">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-8">
+<p class="mb-0">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+</div>
+<div class="col-md-4 text-md-end mt-2 mt-md-0">
+<button class="btn btn-dark me-2" id="accept-cookies">Accept</button>
+<button class="btn btn-outline-dark" id="decline-cookies">Decline</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cookieConsent = document.getElementById('cookie-consent');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const declineBtn = document.getElementById('decline-cookies');
+
+  function setCookiePreference(preference) {
+    localStorage.setItem('cookiePreference', preference);
+    cookieConsent.style.display = 'none';
+  }
+
+  if (!localStorage.getItem('cookiePreference')) {
+    cookieConsent.style.display = 'block';
+  }
+
+  acceptBtn.addEventListener('click', function() {
+    setCookiePreference('accepted');
+  });
+
+  declineBtn.addEventListener('click', function() {
+    setCookiePreference('declined');
+  });
+});
+</script>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+<div style="flex: 1;">
+<header>
+<div class="container-fluid bg-light py-3">
+<div class="row align-items-center">
+<div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
+<a class="text-decoration-none" href="/">
+<h1 class="fs-3 fw-bold text-dark" style="font-family: 'Arial', sans-serif;">sweet_home</h1>
+</a>
+</div>
+<div class="col-md-8">
+<nav class="navbar navbar-expand-md navbar-light justify-content-md-end justify-content-center">
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link text-dark" href="posts.html">Posts</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-dark" href="about.html">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-dark" href="contacts.html">Contacts</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-dark" href="privacy_policy.html">Privacy Policy</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</header>
+<div class="container my-5">
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<h1 class="text-center mb-4">About sweet_home</h1>
+<p class="lead text-muted">Welcome to sweet_home, your go-to resource for 3D Renderingeling in Interior Design. We're passionate about transforming concepts into stunning visual realities.</p>
+<h2 class="mt-5 mb-3">Our Mission</h2>
+<p>At sweet_home, we bridge the gap between imagination and execution in interior design. Our goal is to offervide comprehensive insights, tutorials, and resources on 3D designeling for interiors, helping both experiencedfessionals and enthusiasts bring their visions to life.</p>
+<h2 class="mt-5 mb-3">What We Offer</h2>
+<ul class="list-unstyled">
+<li><i class="fas fa-cube mr-2"></i> In-depth guides on 3D and 5D modelingeling techniques</li>
+<li><i class="fas fa-home mr-2"></i> Tutorials for creating realistic 3D floor plans</li>
+<li><i class="fas fa-palette mr-2"></i> Tips on integrating 3D modelels into interior design professionaljects</li>
+<li><i class="fas fa-laptop-code mr-2"></i> Software reviews and comparisons for 3D modelingeling tools</li>
+<li><i class="fas fa-users mr-2"></i> Community forums for sharing ideas and getting feedback</li>
+</ul>
+<h2 class="mt-5 mb-3">Meet the Team</h2>
+<div class="row">
+<div class="col-md-6 mb-4">
+<div class="card h-100">
+<img alt="Portrait of Jane Doe, a woman in her early 30s with short brown hair and glasses, smiling confidently in a modern office setting" class="card-img-top" src="images/image_0_about.png"/>
+<div class="card-body">
+<h5 class="card-title">Jane Doe</h5>
+<p class="card-text">Founder &amp; Lead 3D Designer</p>
+<p>With over a decade of experience in 3D modelingeling and interior design, Jane brings a wealth of knowledge to sweet_home.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-4">
+<div class="card h-100">
+<img alt="Portrait of John Smith, a man in his late 20s with dark hair and a friendly smile, standing in front of a 3D rendering setup" class="card-img-top" src="images/image_1_about.png"/>
+<div class="card-body">
+<h5 class="card-title">John Smith</h5>
+<p class="card-text">Senior Content Creator</p>
+<p>John specializes in creating engaging tutorials and content that make complex 3D modelingeling concepts accessible to all.</p>
+</div>
+</div>
+</div>
+</div>
+<h2 class="mt-5 mb-3">Our Commitment</h2>
+<p>We are dedicated to staying at the forefront of 3D modelingeling technology for interior design. Our content is regularly updated to reflect the latest trends, software developments, and industry leading practices. Whether you're looking to create stunning 3D floor plans, design immersive interior spaces, or enhance your design workflow, sweet_home is here to guide you every step of the way.</p>
+<h2 class="mt-5 mb-3">Join Our Community</h2>
+<p>We believe in the power of collaboration and shared knowledge. Join our growing community of interior designers, 3D modelingeling enthusiasts, and home design lovers. Together, we can push the boundaries of what's possible in interior design visualization.</p>
+<div class="text-center mt-5">
+<a class="btn btn-outline-secondary btn-lg" href="#">Explore Our Resources</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add smooth scrolling to all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Add hover effect to team member cards
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+</script>
+</div>
+<footer style="width: 100%; z-index: 1000;">
+<div class="container-fluid bg-light py-4">
+<div class="container">
+<div class="row">
+<div class="col-md-4 mb-3 mb-md-0">
+<h5 class="text-dark mb-3">Sweet Home 3D</h5>
+<p class="text-muted small">Transforming interior concepts into stunning 3D realities.</p>
+<div class="mt-3">
+<a class="text-dark me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+<a class="text-dark me-2" href="#"><i class="fab fa-twitter"></i></a>
+<a class="text-dark me-2" href="#"><i class="fab fa-instagram"></i></a>
+<a class="text-dark" href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="col-md-4 mb-3 mb-md-0">
+<h5 class="text-dark mb-3">Quick Links</h5>
+<ul class="list-unstyled">
+<li><a class="text-muted" href="posts.html">Posts</a></li>
+<li><a class="text-muted" href="about.html">About</a></li>
+<li><a class="text-muted" href="contacts.html">Contacts</a></li>
+<li><a class="text-muted" href="privacy_policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h5 class="text-dark mb-3">Contact Us</h5>
+<p class="text-muted small mb-1">123 Design Street, Suite 456</p>
+<p class="text-muted small mb-1">New York, NY 10001</p>
+<p class="text-muted small mb-1">Phone: (212) 555-1234</p>
+<p class="text-muted small">Email: info@sweethome3d.com</p>
+</div>
+</div>
+<hr class="my-4"/>
+<div class="row">
+<div class="col-md-12 text-center">
+<p class="text-muted small mb-0">© 2024 Sweet Home 3D. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+<script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</footer>
+</body>
+</html>
